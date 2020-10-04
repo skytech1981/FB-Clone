@@ -6,7 +6,7 @@ function StoryReel() {
     return (
         <div className="storyReel">
            <Story  
-           image="https://d1xqlf737dvrs6.cloudfront.net/graphics/attachments/6524/dell_14.10_TECH_REFRESH-WEB3_full.jpg?1600949471"
+           image='https://d1xqlf737dvrs6.cloudfront.net/graphics/attachments/6524/dell_14.10_TECH_REFRESH-WEB3_full.jpg?1600949471'
            profileSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIG9oJOjjoXseLZ3TuiGgQ3hhq6Df9gOI6fA&usqp=CAU"
            title="SlayTech1981"
            />
