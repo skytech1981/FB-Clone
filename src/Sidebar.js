@@ -8,15 +8,20 @@ import ChatIcon from "@material-ui/icons/Chat";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import {ExpandMoreOutlined} from "@material-ui/icons";
+import { useStateValue } from './StateProvider';
 
 
 
 
  
 function Sidebar() {
+  const [{user},dispatch] = useStateValue();
+   
     return (
         <div className="sidebar">
-          <SidebarRow src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIG9oJOjjoXseLZ3TuiGgQ3hhq6Df9gOI6fA&usqp=CAU" title="SkyTech1981"/>
+          <SidebarRow src={user.photoURL}
+          title={user.displayName}
+          />
           <SidebarRow Icon={LocalHospitalIcon} title="COVID-19 Information Center " />
           <SidebarRow Icon={EmojiFlagIcon} title="Pages" />
           <SidebarRow Icon={PeopleIcon} title="Friends" />                    
