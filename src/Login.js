@@ -10,22 +10,23 @@ import {actionTypes} from "./reducer";
 
 function Login() {
 
-    const [state,dispatch] = useStateValue();
+    const [state, dispatch] = useStateValue();
     const signIn = () => {
 
-        auth.signInWithPopup(provider)
-        .then (result => { 
+        auth
+        .signInWithPopup(provider)
+        .then (( result )  => { 
 
             dispatch ({
 
-                types: actionTypes.SET_USER,
+                type: actionTypes.SET_USER,
                 user: result.user,
+                
             })    
-            console.log(result.user);
-
-        }).catch(error => alert(error.message)); 
+          })
+        .catch((error )=> alert(error.message));
        
-    }
+    };
 
     return (
         <div className="login">
@@ -41,4 +42,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Login;

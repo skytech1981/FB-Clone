@@ -7,6 +7,8 @@ import Widgets from "./Widgets";
 import Login from "./Login";
 import { useStateValue } from './StateProvider';
 
+
+
 function App() {
  
 const [{user} , dispatch] = useStateValue();
@@ -20,14 +22,14 @@ const [{user} , dispatch] = useStateValue();
      <Login/>
      
      ) : (
-       <>
+       <div>
       <Header/>
      <div className="app__body">
        <Sidebar/>
        <Feed/>
        <Widgets/>
      </div>
-    </>
+    </div>
      )}
     </div>
   );
