@@ -52,7 +52,7 @@ function Header() {
         <div className="header__right">
            <div className="header__info">
            <Avatar/>
-           <h4>Slaytech</h4>
+           <h4>Skytech1981</h4>
            </div>
         <IconButton>
             <AddIcon/>

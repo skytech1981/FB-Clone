@@ -6,11 +6,11 @@ function Widgets() {
     return (
         <div className="widgets">
             <iframe
-            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F10153231379946729%2F&show_text=false&width=734&height=411&appId"
-            width="340"
-            height="100%"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fholyphonicsisrael-106748714157500%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            width="340" 
+            height="500"
             style={{border:"none" ,overflow:"hidden"}}
-            scrolling="none"
+            scrolling="no"
             frameborder="0"
             allowTransparency="true"
             allow="encrypted-media">
