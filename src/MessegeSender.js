@@ -6,22 +6,36 @@ import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import react ,{useState} from "react";
 import { useStateValue } from './StateProvider';
+import db from './firebase';
+import firebase from "firebase";
+ 
 
 function MessegeSender() {
-    const [{user}, dispatch] = useStateValue();
-
-
-
-            const [input , setInput] = useState('')
-            const [ImageUrl , setImageUrl] = useState('')
-
-            const HandleSubmit = e => {
-            e.preventDefault();
+          
+            const [{user}, dispatch] = useStateValue();
+            const [input , setInput] = useState('');
+            const [ImageUrl , setImageUrl] = useState('');
             
-            //some clever db stuff
+            const HandleSubmit = e => {
+                e.preventDefault();
+            
+           
+            
+            db.collection("posts").add({
+                   message:input,
+                   timestamp:firebase.firestore.FieldValue.
+                   serverTimestamp(), 
+                   profilePic: user.photoURL,
+                   username: user.displayName,
+                   image:ImageUrl
 
+            }
+            
+            ) 
+                setInput('');
+                setImageUrl('');
 
-
+                
             };
     return (
         <div className="messageSender">
@@ -34,7 +48,7 @@ function MessegeSender() {
             <input value={ImageUrl}
             onChange={e => setImageUrl(e.target.value)}
             className="messageSender__input" placeholder={"Image URL (Optional)"}/>
-            <button onClick="{HandleSubmit}" type="submit">
+            <button onClick={HandleSubmit} type="submit">
                 Hidden Submit
             </button>
 
